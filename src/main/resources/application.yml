@@ -1,0 +1,21 @@
+
+server:
+  port: 8082
+
+spring:
+  profiles:
+    active: "s3-object-storage"
+
+cloud:
+  aws:
+    credentials:
+      secret-key: CHANGEME123 # minioadmin
+      access-key: ROOTUSER # minioadmin
+    s3:
+      path-style:
+        enabled: true
+      bucket:
+        name: objects
+      endpoint: http://localhost:9000
+      anonymous-files:
+        enabled: false
